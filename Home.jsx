@@ -1,164 +1,125 @@
 import React from "react";
-import styled from "styled-components";
 import { Link } from "react-router-dom";
-import {
-  MdLanguage,
-  MdComputer,
-  MdNetworkWifi,
-  MdWork,
-  MdStarRate,
-} from "react-icons/md"; // Example icons for features
-import Logo from "../ui/Logo";
-import Heading from "../ui/Heading";
-import DarkModeToggle from "../ui/DarkModeToggle";
+import styled from "styled-components";
 
-// General layout styling, using flexbox for alignment and spacing.
-const HomeLayout = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-color: var(--color-grey-0);
-`;
-
-// Header styling, with space for future navigation links and the dark mode toggle.
-const StyledHeader = styled.header`
-  background-color: var(--color-grey-0);
-  padding: 1.2rem 4.8rem;
-  border-bottom: 1px solid var(--color-grey-100);
-  display: flex;
-  gap: 2.4rem;
-  align-items: center;
-  justify-content: space-between;
-
-  @media (max-width: 768px) {
-    padding: 1.2rem 1.5rem; // Adjust padding for smaller screens
-  }
-`;
-
-// Main container for the content, centered and styled for visual appeal.
 const HomeContainer = styled.div`
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-grey-50);
-  padding: 2rem 4rem;
-  gap: 1.2rem;
+  text-align: center;
+  padding: 20px;
 `;
 
-// Container for the features section, including a background color and padding for emphasis.
-const ContentContainer = styled.div`
-  background-color: var(--color-grey-0);
-  border: 1px solid var(--color-grey-100);
-  border-radius: var(--border-radius-md);
-  padding: 3.2rem;
-  display: flex;
-  flex-direction: column;
+const Header = styled.header`
+  background-color: #f8f9fa;
+  padding: 50px 0;
+  margin-bottom: 20px;
 `;
 
-// Styling for the list of features, with added icons for visual interest.
+const FeaturesSection = styled.section`
+  margin: 20px 0;
+`;
+
 const FeatureList = styled.ul`
-  list-style: none; // Remove default list styling
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  list-style: none;
   padding: 0;
 `;
 
-// Individual list items with icons, providing a brief description of platform features.
-const FeatureListItem = styled.li`
-  display: flex;
-  align-items: center;
-  gap: 8px; // Space between icon and text
-  margin-bottom: 10px;
-  font-size: 1.2rem; // Adjust text size for readability
-  text-align: left; // Align text to the left
-  width: 100%; // Ensure full width to align icons and text properly
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  @media (max-width: 768px) {
-    justify-content: left; // Align items to the left on smaller screens
-  }
+const FeatureItem = styled.li`
+  margin: 20px 0;
+  text-align: left;
 `;
 
-// Call to action buttons styled for emphasis and interaction.
-const StyledButton = styled(Link)`
-  background-color: var(--color-grey-200);
-  border: none;
-  padding: 1rem 1.4rem;
-  border-radius: var(--border-radius-sm);
-  font-weight: 500;
-  font-size: 1.4rem;
-  color: black; // Ensure text color contrasts with button background
-  text-decoration: none; // Remove default link styling
-  transition: background-color 0.3s, color 0.3s;
-
-  &:hover {
-    background-color: var(--color-brand-600);
-    color: var(--color-brand-50);
-  }
+const FeatureImage = styled.img`
+  width: 50px;
+  height: 50px;
 `;
 
-// Wrapper for the action buttons, ensuring proper alignment and spacing.
-const ActionButtons = styled.div`
-  display: flex;
-  gap: 10px; // Space between buttons
-  justify-content: center; // Center buttons within the container
-  margin-top: 20px; // Space above the buttons
+const AuthButtons = styled.section`
+  margin: 20px 0;
 `;
 
-// The Home component structure, enhanced for visual appeal and responsiveness.
-function Home() {
+const Button = styled(Link)`
+  margin: 0 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  background-color: ${(props) => (props.primary ? "#007bff" : "#6c757d")};
+`;
+
+const Footer = styled.footer`
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  margin-top: 20px;
+`;
+
+const FooterList = styled.ul`
+  list-style: none;
+  padding: 0;
+`;
+
+const FooterItem = styled.li`
+  display: inline;
+  margin: 0 10px;
+`;
+
+const Home = () => {
   return (
-    <HomeLayout>
-      <StyledHeader>
-        <DarkModeToggle />
-      </StyledHeader>
-      <HomeContainer>
-        <Logo />
-        <Heading as="h1">Welcome to SUTHRAYA</Heading>
-        <Heading as="h2">Empowering Your Learning Journey</Heading>
-        <ContentContainer>
-          <Heading as="h3">Why Join Suthraya?</Heading>
-          <FeatureList>
-            <FeatureListItem>
-              <MdLanguage size="24" />
-              Learn and Practice Languages
-            </FeatureListItem>
-            <FeatureListItem>
-              <MdComputer size="24" />
-              Learn and Enhance Valuable Skills
-            </FeatureListItem>
-            <FeatureListItem>
-              <MdNetworkWifi size="24" />
-              Expand Your Professional Network
-            </FeatureListItem>
-            <FeatureListItem>
-              <MdWork size="24" />
-              Explore Freelance Opportunities
-            </FeatureListItem>
-            <FeatureListItem>
-              <MdStarRate size="24" />
-              Meet Potential Partners through a Rating System
-            </FeatureListItem>
-          </FeatureList>
-        </ContentContainer>
-        <Heading as="h5">
-          Join us today and become a part of a community focused on making a
-          difference!
-        </Heading>
-        <ActionButtons>
-          <StyledButton to="/login">Login</StyledButton>
-          <StyledButton to="/signup">Sign Up</StyledButton>
-        </ActionButtons>
-      </HomeContainer>
-    </HomeLayout>
+    <HomeContainer>
+      <Header>
+        <h1>Welcome to Suthraya</h1>
+        <p>Your comprehensive networking and learning platform</p>
+        <Button primary>Get Started</Button>
+      </Header>
+
+      <FeaturesSection>
+        <h2>Features</h2>
+        <FeatureList>
+          <FeatureItem>
+            <FeatureImage
+              src="path/to/icon.png"
+              alt="Professional Networking"
+            />
+            <h3>Professional Networking</h3>
+            <p>Connect with professionals in your industry.</p>
+          </FeatureItem>
+          <FeatureItem>
+            <FeatureImage src="path/to/icon.png" alt="Educational Content" />
+            <h3>Educational Content</h3>
+            <p>Access a wide range of educational resources.</p>
+          </FeatureItem>
+          <FeatureItem>
+            <FeatureImage
+              src="path/to/icon.png"
+              alt="Social Media Interaction"
+            />
+            <h3>Social Media Interaction</h3>
+            <p>Engage with content and share your thoughts.</p>
+          </FeatureItem>
+        </FeatureList>
+      </FeaturesSection>
+
+      <AuthButtons>
+        <p>Join our community to unlock all features.</p>
+        <Button to="/signup" primary>
+          Sign Up
+        </Button>
+        <Button to="/login">Log In</Button>
+      </AuthButtons>
+
+      <Footer>
+        <p>&copy; 2024 Suthraya. All rights reserved.</p>
+        <FooterList>
+          <FooterItem>
+            <Link to="/privacy">Privacy Policy</Link>
+          </FooterItem>
+          <FooterItem>
+            <Link to="/terms">Terms of Service</Link>
+          </FooterItem>
+          <FooterItem>
+            <Link to="/contact">Contact Us</Link>
+          </FooterItem>
+        </FooterList>
+      </Footer>
+    </HomeContainer>
   );
-}
+};
 
 export default Home;

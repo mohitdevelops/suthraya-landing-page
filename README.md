@@ -42,7 +42,17 @@ Follow these steps to set up the project locally:
 
 ## Contributing
 
-We welcome contributions! Please follow these steps to contribute:
+We welcome contributions to the Suthraya landing page! Here are some areas where you can help:
+
+- **UI/UX Design**: Improve the design and user experience of the landing page.
+- **Content Updates**: Add or update content to better explain the features and benefits of Suthraya.
+- **Performance Optimization**: Enhance the performance of the landing page.
+- **Bug Fixes**: Identify and fix any bugs in the landing page.
+- **Accessibility**: Improve the accessibility of the landing page to ensure it is usable by everyone.
+- **Code Quality**: Refactor code to improve readability and maintainability.
+- **Documentation**: Enhance the documentation to provide clear setup and contribution guidelines.
+
+Please follow these steps to contribute:
 
 1. Fork the repository.
 2. Clone your forked repository:
