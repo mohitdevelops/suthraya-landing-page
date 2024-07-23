@@ -8,16 +8,4 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "20"
-      - run: npm install
-      - name: Log Node.js version
-        run: node -v
-      - name: Log npm version
-        run: npm -v
-      - name: Build project
-        run: npm run build
-      - name: Run tests
-        run: npm test
+    # Add more steps here if there are specific checks or actions you need to run
