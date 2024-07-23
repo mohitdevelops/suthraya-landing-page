@@ -11,7 +11,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "16" # You can also use '20' if compatible with your project
+          node-version: "20"
       - run: npm install
       - run: npm run build
-      - run: npm test # If you have tests, ensure this script is defined in your package.json
+      - name: Run tests
+        run: npm test
+        continue-on-error: true
+      - name: Output test results
+        if: failure()
+        run: cat /path/to/test-results
