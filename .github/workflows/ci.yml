@@ -13,10 +13,11 @@ jobs:
         with:
           node-version: "20"
       - run: npm install
-      - run: npm run build
+      - name: Log Node.js version
+        run: node -v
+      - name: Log npm version
+        run: npm -v
+      - name: Build project
+        run: npm run build
       - name: Run tests
         run: npm test
-        continue-on-error: true
-      - name: Output test results
-        if: failure()
-        run: cat /path/to/test-results
