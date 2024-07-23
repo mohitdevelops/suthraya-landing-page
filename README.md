@@ -1,16 +1,17 @@
 # Suthraya Landing Page
 
+## Introduction
+
 This repository contains the landing page for Suthraya, a comprehensive networking and learning platform. Suthraya combines features from professional networking, educational content, social media interaction, personal connections, and more.
 
 ## Features
 
-- Professional Networking
-- Educational Content
-- Social Media Interaction
-- Personal Connections
-- Real-time Chatting and Notifications
-- Quiz System
-- Language Learning Features
+- **Professional Networking**: Connect with professionals in your field.
+- **Educational Content**: Access learning modules and quizzes to enhance your skills.
+- **Social Interaction**: Engage in global and private chats.
+- **Live Streaming**: Experts can conduct live sessions to share their knowledge, allowing students to learn in real-time.
+- **Quizzes and Language Learning**: Test your knowledge and practice new languages.
+- **Real-Time Notifications**: Stay updated with the latest activities on the platform.
 
 ## Installation
 
