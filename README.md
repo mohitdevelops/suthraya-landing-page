@@ -37,9 +37,9 @@ Follow these steps to set up the project locally:
 
 4. **Run the development server:**
    ```bash
-   npm start
+   npm run dev
    ```
-   The landing page should now be running on [http://localhost:3000](http://localhost:3000).
+   The landing page should now be running on [http://localhost:5173/](http://localhost:5173/).
 
 ## Contributing
 
