@@ -1,0 +1,18 @@
+:root{
+    --light400: #D6BD98;
+    --dark500: #677D6A;
+    --dark600: #40534C;
+    --dark700: #1A3636;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--dark700);
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: sans-serif;
+}
